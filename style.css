@@ -1,0 +1,245 @@
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Navigation */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #10213a;
+    color: white;
+    padding: 20px 8%;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+/* Hero */
+.hero {
+    min-height: 450px;
+    background:
+        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+        url("https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1600&q=80");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 22px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    background: #38bdf8;
+    color: #10213a;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: white;
+}
+
+/* Collage */
+.collage-section {
+    text-align: center;
+    padding: 60px 20px;
+    background: #f1f5f9;
+}
+
+.collage-section h2,
+.about h2,
+.courses h2,
+.facilities h2,
+.contact h2 {
+    font-size: 32px;
+    color: #10213a;
+    margin-bottom: 15px;
+}
+
+.collage-section > p {
+    margin-bottom: 35px;
+    color: #555;
+}
+
+.collage {
+    max-width: 1000px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 220px 220px;
+    gap: 15px;
+}
+
+.collage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+}
+
+.collage img:hover {
+    transform: scale(1.04);
+}
+
+/* About */
+.about {
+    padding: 60px 10%;
+    text-align: center;
+}
+
+.about p {
+    max-width: 800px;
+    margin: auto;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* Courses */
+.courses {
+    padding: 60px 8%;
+    background: #eaf4ff;
+    text-align: center;
+}
+
+.course-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.course-card {
+    background: white;
+    padding: 35px 20px;
+    width: 220px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.course-card:hover {
+    transform: translateY(-8px);
+}
+
+.course-card h3 {
+    color: #0284c7;
+    margin-bottom: 12px;
+}
+
+/* Facilities */
+.facilities {
+    text-align: center;
+    padding: 60px 8%;
+}
+
+.facility-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.facility {
+    background: #10213a;
+    color: white;
+    padding: 30px;
+    width: 280px;
+    border-radius: 12px;
+}
+
+.facility h3 {
+    margin-bottom: 15px;
+}
+
+/* Contact */
+.contact {
+    text-align: center;
+    background: #f1f5f9;
+    padding: 50px 20px;
+}
+
+.contact p {
+    margin: 10px 0;
+}
+
+/* Footer */
+footer {
+    background: #10213a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav {
+        text-align: center;
+    }
+
+    nav a {
+        margin: 8px;
+        display: inline-block;
+    }
+
+    .hero-content h1 {
+        font-size: 35px;
+    }
+
+    .collage {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 180px);
+    }
+}
+
+@media (max-width: 480px) {
+    .collage {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 220px);
+    }
+}
